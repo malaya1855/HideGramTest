@@ -13,20 +13,27 @@ li {
   list-style: none;
 }
 .container {
-  min-width: 375px;
-  width: 100vw;
+  min-width: 320px;
+  max-width: 428px;
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
 .header-container {
   display: block;
-
   padding-top: 15px;
   padding-bottom: 15px;
-
   background-color: #15ae5d;
-  border: 3px solid #016436;
-
   color: white;
   text-align: center;
 }
@@ -34,6 +41,10 @@ li {
   .header-container {
     margin-left: 200px;
   }
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (min-width: 1200px) {
@@ -68,7 +79,6 @@ li {
   gap: 30px;
   height: 100vh;
   background-color: #9747ff;
-  border: 3px solid #58239a;
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -89,15 +99,18 @@ li {
   margin-right: auto;
   margin-left: 37px;
 }
+
 .input {
   display: block;
-  width: 100%;
-  position: fixed;
+  width: inherit;
+  position: sticky;
   bottom: 0;
+  left: 0;
+  right: 0;
   padding-top: 15px;
   padding-bottom: 15px;
+  margin: 0;
   text-align: center;
   background-color: #f24822;
-  border: 3px solid #8e2e1f;
   color: white;
 }
